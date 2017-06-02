@@ -21,7 +21,8 @@ exports.seed = function(knex, Promise) {
         item_image: 'https://images-na.ssl-images-amazon.com/images/I/41VwGotRZsL._SY300_.jpg',
         created_at: new Date('2016-06-26 14:26:16 UTC'),
         updated_at: new Date('2016-06-26 14:26:16 UTC')
-      }).then(() => {
+      })
+      .then(() => {
         return knex.raw("SELECT setval('classifieds_id_seq', (SELECT MAX(id) FROM classifieds))")
       })
     });

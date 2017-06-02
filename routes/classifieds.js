@@ -16,7 +16,6 @@ router.get('/', (req, res, next) => {
   })
 })
 
-
 router.get('/:id', (req, res, next) => {
   let id = req.params.id;
   knex('classifieds')
@@ -84,5 +83,6 @@ router.delete('/:id', (req, res, next) => {
           res.send(err)
   })
 })
+
 
 module.exports = router;
